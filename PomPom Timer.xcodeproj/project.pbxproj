@@ -19,7 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		152ABA27247B36030039BE95 /* PomPom TImer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PomPom TImer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		152ABA27247B36030039BE95 /* PomPom Timer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PomPom Timer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		152ABA2A247B36030039BE95 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		152ABA2C247B36030039BE95 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		152ABA2E247B36030039BE95 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -54,7 +54,7 @@
 		152ABA28247B36030039BE95 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				152ABA27247B36030039BE95 /* PomPom TImer.app */,
+				152ABA27247B36030039BE95 /* PomPom Timer.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -95,9 +95,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		152ABA26247B36030039BE95 /* PomPom TImer */ = {
+		152ABA26247B36030039BE95 /* PomPom Timer */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 152ABA3B247B36050039BE95 /* Build configuration list for PBXNativeTarget "PomPom TImer" */;
+			buildConfigurationList = 152ABA3B247B36050039BE95 /* Build configuration list for PBXNativeTarget "PomPom Timer" */;
 			buildPhases = (
 				152ABA23247B36030039BE95 /* Sources */,
 				152ABA24247B36030039BE95 /* Frameworks */,
@@ -107,9 +107,9 @@
 			);
 			dependencies = (
 			);
-			name = "PomPom TImer";
+			name = "PomPom Timer";
 			productName = "PomPom TImer";
-			productReference = 152ABA27247B36030039BE95 /* PomPom TImer.app */;
+			productReference = 152ABA27247B36030039BE95 /* PomPom Timer.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -127,7 +127,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 152ABA22247B36030039BE95 /* Build configuration list for PBXProject "PomPom TImer" */;
+			buildConfigurationList = 152ABA22247B36030039BE95 /* Build configuration list for PBXProject "PomPom Timer" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -140,7 +140,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				152ABA26247B36030039BE95 /* PomPom TImer */,
+				152ABA26247B36030039BE95 /* PomPom Timer */,
 			);
 		};
 /* End PBXProject section */
@@ -313,10 +313,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.emadrahman.PomPom-TImer";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.emadrahman.PomPom-Timer";
+				PRODUCT_NAME = "PomPom Timer";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -333,17 +333,17 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.emadrahman.PomPom-TImer";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.emadrahman.PomPom-Timer";
+				PRODUCT_NAME = "PomPom Timer";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		152ABA22247B36030039BE95 /* Build configuration list for PBXProject "PomPom TImer" */ = {
+		152ABA22247B36030039BE95 /* Build configuration list for PBXProject "PomPom Timer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				152ABA39247B36050039BE95 /* Debug */,
@@ -352,7 +352,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		152ABA3B247B36050039BE95 /* Build configuration list for PBXNativeTarget "PomPom TImer" */ = {
+		152ABA3B247B36050039BE95 /* Build configuration list for PBXNativeTarget "PomPom Timer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				152ABA3C247B36050039BE95 /* Debug */,

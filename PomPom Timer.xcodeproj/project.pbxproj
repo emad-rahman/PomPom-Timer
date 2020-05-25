@@ -46,7 +46,7 @@
 		152ABA1E247B36030039BE95 = {
 			isa = PBXGroup;
 			children = (
-				152ABA29247B36030039BE95 /* PomPom TImer */,
+				152ABA29247B36030039BE95 /* PomPom Timer */,
 				152ABA28247B36030039BE95 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -59,7 +59,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		152ABA29247B36030039BE95 /* PomPom TImer */ = {
+		152ABA29247B36030039BE95 /* PomPom Timer */ = {
 			isa = PBXGroup;
 			children = (
 				152ABA42247B53380039BE95 /* SupportingViews */,
@@ -73,7 +73,7 @@
 				152ABA38247B36050039BE95 /* Info.plist */,
 				152ABA32247B36050039BE95 /* Preview Content */,
 			);
-			path = "PomPom TImer";
+			path = "PomPom Timer";
 			sourceTree = "<group>";
 		};
 		152ABA32247B36050039BE95 /* Preview Content */ = {

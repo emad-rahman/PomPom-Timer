@@ -10,12 +10,32 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, World!")
+        TabView {
+            TimerView()
+                .tabItem {
+                    Image(systemName: "clock")
+                        .imageScale(.large)
+                    Text("Timer")
+            }
+            
+            SettingsView()
+                .tabItem {
+                    Image(systemName: "gear")
+                        .imageScale(.large)
+                    Text("Settings")
+            }
+        }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        Group {
+            ContentView()
+                .environment(\.colorScheme, .light)
+            ContentView()
+                .environment(\.colorScheme, .dark)
+            
+        }
     }
 }

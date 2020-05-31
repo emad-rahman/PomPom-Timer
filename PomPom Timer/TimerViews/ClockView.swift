@@ -10,14 +10,7 @@ import SwiftUI
 
 struct ClockView: View {
     var body: some View {
-        //        if UITraitCollection.current.userInterfaceStyle == .dark {
-        //            print("Dark mode")
-        //        }
-        //        else {
-        //            print("Light mode")
-        //        }
-        
-        
+            
         ZStack {
             ZStack {
                 Circle()
@@ -30,10 +23,6 @@ struct ClockView: View {
                     .frame(width: 280, height: 280)
             }
             .rotationEffect(.init(degrees: -90))
-            
-            Text("1:00")
-                .font(.largeTitle)
-                .fontWeight(.black)
         }
     }
     

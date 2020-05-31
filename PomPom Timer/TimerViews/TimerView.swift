@@ -9,11 +9,13 @@
 import SwiftUI
 
 struct TimerView: View {
+    var timerState: TimerState
+    
     var body: some View {
         NavigationView {
             ZStack {
                 ClockView()
-                TimerTextView()
+                TimerTextView(timerState: timerState)
             }
             .navigationBarTitle("PomPom Timer", displayMode: .inline)
         }
@@ -22,6 +24,6 @@ struct TimerView: View {
 
 struct Timer_Previews: PreviewProvider {
     static var previews: some View {
-        TimerView()
+        TimerView(timerState: TimerState.init())
     }
 }

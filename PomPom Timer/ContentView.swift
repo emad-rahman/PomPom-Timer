@@ -9,9 +9,11 @@
 import SwiftUI
 
 struct ContentView: View {
+    @EnvironmentObject private var timerState: TimerState
+    
     var body: some View {
         TabView {
-            TimerView()
+            TimerView(timerState: timerState)
                 .tabItem {
                     Image(systemName: "clock")
                         .imageScale(.large)
@@ -33,8 +35,11 @@ struct ContentView_Previews: PreviewProvider {
         Group {
             ContentView()
                 .environment(\.colorScheme, .light)
+                .environmentObject(TimerState())
+            
             ContentView()
                 .environment(\.colorScheme, .dark)
+                .environmentObject(TimerState())
             
         }
     }

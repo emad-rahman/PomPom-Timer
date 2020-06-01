@@ -20,10 +20,10 @@ struct ClockView: View {
                     .frame(width: 280, height: 280)
                 Circle()
                     .trim(from: 0, to: CGFloat(self.timerState.progress()))
-                    .stroke(Color("TimerCircleForeground"), style: StrokeStyle(lineWidth: 35, lineCap: .round))
+                    .stroke(Color("TimerCircleForeground"), style: StrokeStyle(lineWidth: 30, lineCap: .round))
                     .rotationEffect(Angle(degrees: -90.0))
                     .frame(width: 280, height: 280)
-                    .animation(.linear)
+                    .animation(.linear(duration: 0.05))
             }
 //            .rotationEffect(.init(degrees: 270))
         }

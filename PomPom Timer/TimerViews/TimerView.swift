@@ -18,8 +18,11 @@ struct TimerView: View {
                     ClockView()
                     TimerTextView()
                 }
+                .padding(.top, 75)
                 
-                HStack {
+                Spacer()
+                
+                HStack(spacing: 75.0) {
                     Button(action: {
                         self.timerState.started.toggle()
                     }) {
@@ -30,16 +33,14 @@ struct TimerView: View {
                             Text("Stop")
                         }
                     }
-                    .padding(.trailing)
                 
                     Button(action: {
                         self.timerState.reset()
                     }) {
                         Text("Reset")
                     }
-                    .padding(.leading)
                 }
-                .padding(.all)
+                .padding(.bottom, 100.0)
             }
             .navigationBarTitle("PomPom Timer", displayMode: .inline)
         }

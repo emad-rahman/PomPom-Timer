@@ -26,7 +26,8 @@ final class TimerState: ObservableObject {
     }
     
     func progress() -> Double {
-        return 1 - ((1200.0 - ((20.0 - Double(minutesLeft)) * 60) - ((60.0 - Double(secondsLeft)))) / 1200.0)
+        let ret = 1 - ((1200.0 - ((20.0 - Double(minutesLeft)) * 60) - ((60.0 - Double(secondsLeft)))) / 1200.0)
+        return ret
     }
     
     func reset() {

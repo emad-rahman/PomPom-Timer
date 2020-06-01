@@ -9,8 +9,9 @@
 import SwiftUI
 
 struct ClockView: View {
+    @EnvironmentObject var timerState: TimerState
+    
     var body: some View {
-            
         ZStack {
             ZStack {
                 Circle()
@@ -18,11 +19,13 @@ struct ClockView: View {
                     .stroke(Color("TimerCircleBackground"), style: StrokeStyle(lineWidth: 35, lineCap: .round))
                     .frame(width: 280, height: 280)
                 Circle()
-                    .trim(from: 0, to: 0.5)
+                    .trim(from: 0, to: CGFloat(self.timerState.progress()))
                     .stroke(Color("TimerCircleForeground"), style: StrokeStyle(lineWidth: 35, lineCap: .round))
+                    .rotationEffect(Angle(degrees: -90.0))
+                    .animation(.easeIn)
                     .frame(width: 280, height: 280)
             }
-            .rotationEffect(.init(degrees: -90))
+//            .rotationEffect(.init(degrees: 270))
         }
     }
     
@@ -32,6 +35,7 @@ struct ClockView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
             ClockView()
+                .environmentObject(TimerState())
         }
     }
 }

@@ -9,22 +9,30 @@
 import SwiftUI
 
 struct TimerTextView: View {
-    var timerState: TimerState
+    @EnvironmentObject var timerState: TimerState
     
-    let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+//    let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
 
     var body: some View {
         VStack {
-            Text("\(self.timerState.secondsLeft)")
-                .font(.largeTitle)
-                .onReceive(timer) { input in
-                    if self.timerState.secondsLeft > 0 && self.timerState.started {
-                        self.timerState.secondsLeft -= 1
-                        print("in loop")
-                    } else {
-                        print("not in loop")
-                    }
+            HStack {
+                Text("\(self.timerState.minutesLeft)")
+                    .font(.largeTitle)
+                Text(":")
+                    .font(.largeTitle)
+                Text("\(self.timerState.secondsLeft)")
+                    .font(.largeTitle)
             }
+//            .onReceive(timer) { input in
+//                if self.timerState.secondsLeft > 0 && self.timerState.started {
+//                    self.timerState.secondsLeft -= 1
+//                } else if self.timerState.secondsLeft == 0 && self.timerState.started {
+//                    self.timerState.minutesLeft -= 1;
+//                    self.timerState.secondsLeft = 60;
+//                } else if self.timerState.isTimerFinished() {
+//
+//                }
+//            }
             
             
             Button(action: {
@@ -43,6 +51,7 @@ struct TimerTextView: View {
 
 struct TimerTextView_Previews: PreviewProvider {
     static var previews: some View {
-        TimerTextView(timerState: TimerState.init())
+        TimerTextView()
+            .environmentObject(TimerState())
     }
 }

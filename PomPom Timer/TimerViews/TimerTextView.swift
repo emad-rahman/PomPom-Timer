@@ -18,32 +18,13 @@ struct TimerTextView: View {
             HStack {
                 Text("\(self.timerState.minutesLeft)")
                     .font(.largeTitle)
+                    .bold()
                 Text(":")
                     .font(.largeTitle)
+                    .bold()
                 Text("\(self.timerState.secondsLeft)")
                     .font(.largeTitle)
-            }
-//            .onReceive(timer) { input in
-//                if self.timerState.secondsLeft > 0 && self.timerState.started {
-//                    self.timerState.secondsLeft -= 1
-//                } else if self.timerState.secondsLeft == 0 && self.timerState.started {
-//                    self.timerState.minutesLeft -= 1;
-//                    self.timerState.secondsLeft = 60;
-//                } else if self.timerState.isTimerFinished() {
-//
-//                }
-//            }
-            
-            
-            Button(action: {
-                self.timerState.started.toggle()
-            }) {
-                if !self.timerState.started {
-                    Text("Start")
-                }
-                else{
-                    Text("Stop")
-                }
+                    .bold()
             }
         }
     }

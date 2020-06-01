@@ -22,8 +22,8 @@ struct ClockView: View {
                     .trim(from: 0, to: CGFloat(self.timerState.progress()))
                     .stroke(Color("TimerCircleForeground"), style: StrokeStyle(lineWidth: 35, lineCap: .round))
                     .rotationEffect(Angle(degrees: -90.0))
-                    .animation(.easeIn)
                     .frame(width: 280, height: 280)
+                    .animation(.linear)
             }
 //            .rotationEffect(.init(degrees: 270))
         }

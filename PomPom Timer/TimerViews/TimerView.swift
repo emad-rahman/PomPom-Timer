@@ -14,33 +14,45 @@ struct TimerView: View {
     var body: some View {
         NavigationView {
             VStack {
+                Spacer()
                 ZStack {
                     ClockView()
                     TimerTextView()
                 }
-                .padding(.top, 75)
                 
                 Spacer()
                 
-                HStack(spacing: 75.0) {
+                HStack {
+                    Spacer()
+                    
                     Button(action: {
                         self.timerState.started.toggle()
                     }) {
                         if !self.timerState.started {
+                            Image(systemName: "play.circle.fill")
+                                .imageScale(.large)
                             Text("Start")
                         }
                         else{
+                            Image(systemName: "pause.circle.fill")
+                                .imageScale(.large)
                             Text("Stop")
                         }
                     }
+                    
+                    Spacer()
                 
                     Button(action: {
                         self.timerState.reset()
                     }) {
+                        Image(systemName: "arrow.uturn.left.circle.fill")
+                            .imageScale(.large)
                         Text("Reset")
                     }
+                    
+                    Spacer()
                 }
-                .padding(.bottom, 100.0)
+                Spacer()
             }
             .navigationBarTitle("PomPom Timer", displayMode: .inline)
         }

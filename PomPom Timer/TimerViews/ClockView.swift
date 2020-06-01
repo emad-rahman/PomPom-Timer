@@ -25,10 +25,8 @@ struct ClockView: View {
                     .frame(width: 280, height: 280)
                     .animation(.linear(duration: 0.05))
             }
-//            .rotationEffect(.init(degrees: 270))
         }
     }
-    
 }
 
 struct ClockView_Previews: PreviewProvider {

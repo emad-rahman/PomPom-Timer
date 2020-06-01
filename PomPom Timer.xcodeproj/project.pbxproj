@@ -17,6 +17,7 @@
 		152ABA41247B3A7E0039BE95 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152ABA40247B3A7E0039BE95 /* TimerView.swift */; };
 		152ABA44247B53470039BE95 /* ClockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152ABA43247B53470039BE95 /* ClockView.swift */; };
 		15760E94248474F100F6925B /* TimerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15760E93248474F100F6925B /* TimerState.swift */; };
+		15760E96248496A500F6925B /* ButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15760E95248496A500F6925B /* ButtonsView.swift */; };
 		15C8B5502484302800424A73 /* TimerTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C8B54F2484302800424A73 /* TimerTextView.swift */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +34,7 @@
 		152ABA40247B3A7E0039BE95 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		152ABA43247B53470039BE95 /* ClockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockView.swift; sourceTree = "<group>"; };
 		15760E93248474F100F6925B /* TimerState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerState.swift; sourceTree = "<group>"; };
+		15760E95248496A500F6925B /* ButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsView.swift; sourceTree = "<group>"; };
 		15C8B54F2484302800424A73 /* TimerTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerTextView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -102,6 +104,7 @@
 				152ABA40247B3A7E0039BE95 /* TimerView.swift */,
 				152ABA43247B53470039BE95 /* ClockView.swift */,
 				15C8B54F2484302800424A73 /* TimerTextView.swift */,
+				15760E95248496A500F6925B /* ButtonsView.swift */,
 			);
 			path = TimerViews;
 			sourceTree = "<group>";
@@ -183,6 +186,7 @@
 				152ABA2D247B36030039BE95 /* SceneDelegate.swift in Sources */,
 				152ABA3F247B3A490039BE95 /* SettingsView.swift in Sources */,
 				15760E94248474F100F6925B /* TimerState.swift in Sources */,
+				15760E96248496A500F6925B /* ButtonsView.swift in Sources */,
 				152ABA41247B3A7E0039BE95 /* TimerView.swift in Sources */,
 				152ABA2F247B36030039BE95 /* ContentView.swift in Sources */,
 			);

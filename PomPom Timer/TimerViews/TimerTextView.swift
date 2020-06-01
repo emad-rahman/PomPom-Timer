@@ -10,8 +10,6 @@ import SwiftUI
 
 struct TimerTextView: View {
     @EnvironmentObject var timerState: TimerState
-    
-//    let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
 
     var body: some View {
         VStack {

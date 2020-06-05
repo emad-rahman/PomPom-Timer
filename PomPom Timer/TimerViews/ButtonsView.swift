@@ -22,6 +22,7 @@ struct ButtonsView: View {
                     Image(systemName: "play.circle.fill")
                         .imageScale(.large)
                     Text("Start")
+                    .fixedSize()
                 }
                 else{
                     Image(systemName: "pause.circle.fill")
@@ -32,16 +33,18 @@ struct ButtonsView: View {
                 
             Spacer()
             
-            Button(action: {
-                self.timerState.reset()
-            }) {
-                Image(systemName: "arrow.uturn.left.circle.fill")
-                    .imageScale(.large)
-                Text("Reset")
+            if !self.timerState.started {
+                Button(action: {
+                    self.timerState.reset()
+                }) {
+                    Image(systemName: "arrow.uturn.left.circle.fill")
+                        .imageScale(.large)
+                    Text("Reset")
+                }
+                Spacer()
             }
-            
-            Spacer()
         }
+        .animation(.easeInOut)
     }
 }
 

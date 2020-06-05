@@ -16,8 +16,8 @@ final class TimerState: ObservableObject {
     @Published var started: Bool
     
     init() {
-        secondsLeft = 60;
-        minutesLeft = 20;
+        secondsLeft = 3;
+        minutesLeft = 19;
         started = false;
     }
     
@@ -26,12 +26,12 @@ final class TimerState: ObservableObject {
     }
     
     func progress() -> Double {
-        let ret = 1 - ((1200.0 - ((20.0 - Double(minutesLeft)) * 60) - ((60.0 - Double(secondsLeft)))) / 1200.0)
+        let ret = 1 - ((1200.0 - ((20.0 - Double(minutesLeft)) * 60) - ((0.0 - Double(secondsLeft)))) / 1200.0)
         return ret
     }
     
     func reset() {
-        secondsLeft = 60;
+        secondsLeft = 0;
         minutesLeft = 20;
         started = false;
     }

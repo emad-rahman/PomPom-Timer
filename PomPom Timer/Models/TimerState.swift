@@ -16,8 +16,8 @@ final class TimerState: ObservableObject {
     @Published var started: Bool
     
     init() {
-        secondsLeft = 3;
-        minutesLeft = 19;
+        secondsLeft = 0;
+        minutesLeft = 20;
         started = false;
     }
     

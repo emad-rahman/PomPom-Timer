@@ -14,13 +14,13 @@ struct TimerTextView: View {
     var body: some View {
         VStack {
             HStack {
-                Text("\(self.timerState.minutesLeft)")
+                Text("\((String.init(format: "%02d", self.timerState.minutesLeft)))")
                     .font(.largeTitle)
                     .bold()
                 Text(":")
                     .font(.largeTitle)
                     .bold()
-                Text("\(self.timerState.secondsLeft)")
+                Text("\((String.init(format: "%02d", self.timerState.secondsLeft)))")
                     .font(.largeTitle)
                     .bold()
             }

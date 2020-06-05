@@ -22,10 +22,10 @@ struct ContentView: View {
                     Text("Timer")
             }.onReceive(timer) { input in
                 if self.timerState.secondsLeft > 0 && self.timerState.started {
-                    self.timerState.secondsLeft -= 5
+                    self.timerState.secondsLeft -= 1
                 } else if self.timerState.secondsLeft == 0 && self.timerState.started {
                     self.timerState.minutesLeft -= 1;
-                    self.timerState.secondsLeft = 60;
+                    self.timerState.secondsLeft = 59;
                 } else if self.timerState.isTimerFinished() {
                     
                 }

@@ -48,9 +48,9 @@ struct ContentView_Previews: PreviewProvider {
                 .environment(\.colorScheme, .light)
                 .environmentObject(TimerState())
             
-            ContentView()
-                .environment(\.colorScheme, .dark)
-                .environmentObject(TimerState())
+//            ContentView()
+//                .environment(\.colorScheme, .dark)
+//                .environmentObject(TimerState())
         }
     }
 }

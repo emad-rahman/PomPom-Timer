@@ -38,6 +38,7 @@ struct ContentView: View {
                     Text("Settings")
             }
         }
+        .accentColor(Color("TimerCircleForeground"))
     }
 }
 

@@ -10,7 +10,7 @@ import SwiftUI
 
 struct ButtonsView: View {
     @EnvironmentObject var timerState: TimerState
-    var buttonWidth: CGFloat = 90
+    var buttonWidth: CGFloat = 95
     var buttonHeight: CGFloat = 40
     
     var body: some View {
@@ -20,7 +20,7 @@ struct ButtonsView: View {
             ZStack{
                 Rectangle()
                     .frame(width: buttonWidth, height: buttonHeight)
-                    .foregroundColor(.green)
+                    .foregroundColor(Color("TimerCircleForeground"))
                     .cornerRadius(10)
                 
                 Button(action: {
@@ -32,6 +32,7 @@ struct ButtonsView: View {
                                 .imageScale(.large)
                                 .foregroundColor(.white)
                             Text("Start")
+                                .bold()
                                 .fixedSize()
                                 .foregroundColor(.white)
                         }
@@ -41,6 +42,7 @@ struct ButtonsView: View {
                             .imageScale(.large)
                             .foregroundColor(.white)
                         Text("Stop")
+                            .bold()
                             .foregroundColor(.white)
                     }
                 }
@@ -52,7 +54,7 @@ struct ButtonsView: View {
                 ZStack{
                     Rectangle()
                     .frame(width: buttonWidth, height: buttonHeight)
-                    .foregroundColor(.gray)
+                        .foregroundColor(Color(.lightGray))
                     .cornerRadius(10)
                     
                     Button(action: {
@@ -62,6 +64,7 @@ struct ButtonsView: View {
                             .imageScale(.large)
                             .foregroundColor(.white)
                         Text("Reset")
+                            .bold()
                             .foregroundColor(.white)
                     }
                 }

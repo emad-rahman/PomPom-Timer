@@ -12,6 +12,7 @@ struct ButtonsView: View {
     @EnvironmentObject var timerState: TimerState
     var buttonWidth: CGFloat = 95
     var buttonHeight: CGFloat = 40
+    var cornerRadius: CGFloat = 15
     
     var body: some View {
         HStack {
@@ -21,7 +22,7 @@ struct ButtonsView: View {
                 Rectangle()
                     .frame(width: buttonWidth, height: buttonHeight)
                     .foregroundColor(Color("TimerCircleForeground"))
-                    .cornerRadius(10)
+                    .cornerRadius(cornerRadius)
                 
                 Button(action: {
                     self.timerState.started.toggle()
@@ -55,7 +56,7 @@ struct ButtonsView: View {
                     Rectangle()
                     .frame(width: buttonWidth, height: buttonHeight)
                         .foregroundColor(Color(.lightGray))
-                    .cornerRadius(10)
+                    .cornerRadius(cornerRadius)
                     
                     Button(action: {
                         self.timerState.reset()

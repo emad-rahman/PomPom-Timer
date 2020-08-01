@@ -10,8 +10,8 @@ import SwiftUI
 
 struct ButtonsView: View {
     @EnvironmentObject var timerState: TimerState
-    var buttonWidth: CGFloat = 95
-    var buttonHeight: CGFloat = 40
+    var buttonWidth: CGFloat = 120
+    var buttonHeight: CGFloat = 60
     var cornerRadius: CGFloat = 15
     
     var body: some View {

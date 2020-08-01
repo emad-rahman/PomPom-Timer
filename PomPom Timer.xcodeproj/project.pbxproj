@@ -22,7 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		152ABA27247B36030039BE95 /* PomPom Timer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PomPom Timer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		152ABA27247B36030039BE95 /* PomPom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PomPom.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		152ABA2A247B36030039BE95 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		152ABA2C247B36030039BE95 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		152ABA2E247B36030039BE95 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -60,7 +60,7 @@
 		152ABA28247B36030039BE95 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				152ABA27247B36030039BE95 /* PomPom Timer.app */,
+				152ABA27247B36030039BE95 /* PomPom.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -126,7 +126,7 @@
 			);
 			name = "PomPom Timer";
 			productName = "PomPom TImer";
-			productReference = 152ABA27247B36030039BE95 /* PomPom Timer.app */;
+			productReference = 152ABA27247B36030039BE95 /* PomPom.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -331,12 +331,13 @@
 				DEVELOPMENT_TEAM = AVNLL8WLT2;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "PomPom TImer/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.emadrahman.PomPom-Timer";
-				PRODUCT_NAME = "PomPom Timer";
+				PRODUCT_NAME = PomPom;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -351,12 +352,13 @@
 				DEVELOPMENT_TEAM = AVNLL8WLT2;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "PomPom TImer/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.emadrahman.PomPom-Timer";
-				PRODUCT_NAME = "PomPom Timer";
+				PRODUCT_NAME = PomPom;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

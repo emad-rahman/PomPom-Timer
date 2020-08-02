@@ -41,7 +41,7 @@ final class TimerState: ObservableObject {
         if started {
             subtractSeconds(secondsToSubtract: 1)
         } else if complete {
-            print("Timer Complete")
+            // do something
         }
     }
     

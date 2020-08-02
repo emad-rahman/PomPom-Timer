@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import UserNotifications
 
 struct ButtonsView: View {
     @EnvironmentObject var timerState: TimerState

@@ -50,6 +50,10 @@ final class TimerState: ObservableObject {
     }
     
     func setStateForForeground() {
+        if !started || complete {
+            return
+        }
+        
         let timeInterval = (currentDate.timeIntervalSinceNow) * -1
         
         let minutesElapsedInBackground: Int = Int(timeInterval / 60)

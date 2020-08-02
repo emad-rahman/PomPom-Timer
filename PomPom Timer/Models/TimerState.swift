@@ -18,7 +18,6 @@ final class TimerState: ObservableObject {
     
     var currentDate: Date = Date()
     
-    
     init() {}
     
     func isTimerFinished() -> Bool {
@@ -82,5 +81,9 @@ final class TimerState: ObservableObject {
         } else {
             secondsLeft -= secondsToSubtract
         }
+    }
+    
+    func remainingTimeInSeconds() -> Double {
+        return Double((minutesLeft * 60) + secondsLeft)
     }
 }

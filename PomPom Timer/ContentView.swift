@@ -21,14 +21,11 @@ struct ContentView: View {
                         .imageScale(.large)
                     Text("Timer")
             }.onReceive(timer) { input in
-                if self.timerState.secondsLeft > 0 && self.timerState.started {
-                    self.timerState.secondsLeft -= 1
-                } else if self.timerState.secondsLeft == 0 && self.timerState.started {
-                    self.timerState.minutesLeft -= 1;
-                    self.timerState.secondsLeft = 59;
-                } else if self.timerState.isTimerFinished() {
-                    
-                }
+                self.timerState.update()
+            }.onReceive(NotificationCenter.default.publisher(for: UIApplication.willResignActiveNotification)) { _ in
+                self.timerState.setStateForBackground()
+            }.onReceive(NotificationCenter.default.publisher(for: UIApplication.willEnterForegroundNotification)) { _ in
+                self.timerState.setStateForForeground()
             }
             
             SettingsView()

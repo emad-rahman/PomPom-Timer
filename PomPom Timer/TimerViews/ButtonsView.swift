@@ -19,10 +19,9 @@ struct ButtonsView: View {
             Spacer()
             
             ZStack{
-                Rectangle()
+                RoundedRectangle(cornerRadius: cornerRadius)
                     .frame(width: buttonWidth, height: buttonHeight)
                     .foregroundColor(Color("TimerCircleForeground"))
-                    .cornerRadius(cornerRadius)
                 
                 Button(action: {
                     self.timerState.started.toggle()
@@ -53,10 +52,9 @@ struct ButtonsView: View {
             
             if !self.timerState.started {
                 ZStack{
-                    Rectangle()
+                    RoundedRectangle(cornerRadius: cornerRadius)
                     .frame(width: buttonWidth, height: buttonHeight)
                         .foregroundColor(Color(.lightGray))
-                    .cornerRadius(cornerRadius)
                     
                     Button(action: {
                         self.timerState.reset()

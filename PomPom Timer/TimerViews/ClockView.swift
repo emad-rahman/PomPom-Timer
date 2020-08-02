@@ -10,6 +10,7 @@ import SwiftUI
 
 struct ClockView: View {
     @EnvironmentObject var timerState: TimerState
+    @State var scale: CGFloat = 1
     
     var body: some View {
         ZStack {
@@ -18,12 +19,31 @@ struct ClockView: View {
                     .trim(from: 0, to: 1)
                     .stroke(Color("TimerCircleBackground"), style: StrokeStyle(lineWidth: 40, lineCap: .round))
                     .frame(width: 280, height: 280)
-                Circle()
-                    .trim(from: 0, to: CGFloat(self.timerState.progress()))
-                    .stroke(Color("TimerCircleForeground"), style: StrokeStyle(lineWidth: 35, lineCap: .round))
-                    .rotationEffect(Angle(degrees: -90.0))
-                    .frame(width: 280, height: 280)
-                    .animation(.linear(duration: 0.05))
+                
+                ZStack {
+                    if !self.timerState.complete {
+                        Circle()
+                            .trim(from: 0, to: CGFloat(self.timerState.progress()))
+                            .stroke(Color("TimerCircleForeground"), style: StrokeStyle(lineWidth: 35, lineCap: .round))
+                            .rotationEffect(Angle(degrees: -90.0))
+                            .frame(width: 280, height: 280)
+                            .animation(.linear(duration: 0.05))
+                    }
+                    
+                    if self.timerState.complete {
+                        Circle()
+                            .fill(Color("TimerCircleForeground"))
+                            .frame(width: 1, height: 1)
+                            .scaleEffect(self.scale)
+                            .animation(.easeIn)
+                            .onAppear {
+                                self.scale = 300
+                            }.onDisappear() {
+                                self.scale = 1
+                            }
+                    }
+                }
+                .animation(.default)
             }
         }
     }

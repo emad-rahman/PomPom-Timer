@@ -9,6 +9,24 @@
 import SwiftUI
 import UserNotifications
 
+extension AnyTransition {
+    static var moveAndFadeRight: AnyTransition {
+        let insertion = AnyTransition.move(edge: .trailing)
+            .combined(with: .opacity)
+        let removal = AnyTransition.move(edge: .trailing)
+            .combined(with: opacity)
+        return .asymmetric(insertion: insertion, removal: removal)
+    }
+    
+    static var moveAndFadeLeft: AnyTransition {
+        let insertion = AnyTransition.move(edge: .leading)
+            .combined(with: .opacity)
+        let removal = AnyTransition.move(edge: .leading)
+            .combined(with: opacity)
+        return .asymmetric(insertion: insertion, removal: removal)
+    }
+}
+
 struct ButtonsView: View {
     @EnvironmentObject var timerState: TimerState
     var buttonWidth: CGFloat = 120
@@ -19,55 +37,66 @@ struct ButtonsView: View {
         HStack {
             Spacer()
             
-            ZStack{
-                RoundedRectangle(cornerRadius: cornerRadius)
-                    .frame(width: buttonWidth, height: buttonHeight)
-                    .foregroundColor(Color("TimerCircleForeground"))
-                
+            if !self.timerState.complete {
                 Button(action: {
-                    self.timerState.started.toggle()
+                    withAnimation {
+                        self.timerState.started.toggle()
+                    }
                 }) {
-                    if !self.timerState.started {
+                    ZStack {
+                        RoundedRectangle(cornerRadius: cornerRadius)
+                            .frame(width: buttonWidth, height: buttonHeight)
+                            .foregroundColor(Color("TimerCircleForeground"))
+                        
                         HStack{
-                            Image(systemName: "play.circle.fill")
+                            if !self.timerState.started {
+                                    Image(systemName: "play.circle.fill")
+                                        .imageScale(.large)
+                                        .foregroundColor(.white)
+                                    Text("Start")
+                                        .bold()
+                                        .fixedSize()
+                                        .foregroundColor(.white)
+                                
+                            } else {
+                                Image(systemName: "pause.circle.fill")
+                                    .imageScale(.large)
+                                    .foregroundColor(.white)
+                                Text("Stop")
+                                    .bold()
+                                    .foregroundColor(.white)
+                            }
+                        }
+                    }
+                }
+                .transition(.moveAndFadeLeft)
+                
+                Spacer()
+            }
+            
+            if !self.timerState.started {
+                Button(action: {
+                    withAnimation {
+                        self.timerState.reset()
+                    }
+                }) {
+                    ZStack {
+                        RoundedRectangle(cornerRadius: cornerRadius)
+                           .frame(width: buttonWidth, height: buttonHeight)
+                           .foregroundColor(Color(.lightGray))
+                        
+                        HStack {
+                            Image(systemName: "arrow.uturn.left.circle.fill")
                                 .imageScale(.large)
                                 .foregroundColor(.white)
-                            Text("Start")
+                            Text("Reset")
                                 .bold()
-                                .fixedSize()
                                 .foregroundColor(.white)
                         }
                     }
-                    else{
-                        Image(systemName: "pause.circle.fill")
-                            .imageScale(.large)
-                            .foregroundColor(.white)
-                        Text("Stop")
-                            .bold()
-                            .foregroundColor(.white)
-                    }
                 }
-            }
+                .transition(.moveAndFadeRight)
                 
-            Spacer()
-            
-            if !self.timerState.started {
-                ZStack{
-                    RoundedRectangle(cornerRadius: cornerRadius)
-                    .frame(width: buttonWidth, height: buttonHeight)
-                        .foregroundColor(Color(.lightGray))
-                    
-                    Button(action: {
-                        self.timerState.reset()
-                    }) {
-                        Image(systemName: "arrow.uturn.left.circle.fill")
-                            .imageScale(.large)
-                            .foregroundColor(.white)
-                        Text("Reset")
-                            .bold()
-                            .foregroundColor(.white)
-                    }
-                }
                 Spacer()
             }
         }

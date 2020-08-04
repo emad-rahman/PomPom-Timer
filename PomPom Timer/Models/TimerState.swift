@@ -30,10 +30,10 @@ final class TimerState: ObservableObject {
     }
     
     func reset() {
-        secondsLeft = 0;
-        minutesLeft = 20;
-        started = false;
-        complete = false;
+        secondsLeft = 0
+        minutesLeft = 20
+        started = false
+        complete = false
     }
     
     func update() {

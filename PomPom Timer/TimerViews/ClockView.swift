@@ -8,6 +8,13 @@
 
 import SwiftUI
 
+extension AnyTransition {
+    static var scaleAndFade: AnyTransition {
+        AnyTransition.scale
+            .combined(with: .opacity)
+    }
+}
+
 struct ClockView: View {
     @EnvironmentObject var timerState: TimerState
     @State var scale: CGFloat = 1
@@ -26,24 +33,27 @@ struct ClockView: View {
                             .trim(from: 0, to: CGFloat(self.timerState.progress()))
                             .stroke(Color("TimerCircleForeground"), style: StrokeStyle(lineWidth: 35, lineCap: .round))
                             .rotationEffect(Angle(degrees: -90.0))
-                            .frame(width: 280, height: 280)
                             .animation(.linear(duration: 0.05))
-                    }
-                    
-                    if self.timerState.complete {
+                            .frame(width: 280, height: 280)
+                            .transition(.opacity)
+                            .animation(.default)
+                    } else if self.timerState.complete {
                         Circle()
                             .fill(Color("TimerCircleForeground"))
                             .frame(width: 1, height: 1)
                             .scaleEffect(self.scale)
-                            .animation(.easeIn)
+                            .transition(.scaleAndFade)
                             .onAppear {
                                 self.scale = 300
-                            }.onDisappear() {
+                            }
+                            .animation(.spring(response: 0.55, dampingFraction: 0.25))
+                            .onDisappear() {
                                 self.scale = 1
                             }
+                            .animation(.easeOut)
                     }
                 }
-                .animation(.default)
+                
             }
         }
     }

@@ -46,10 +46,10 @@ struct TimerTextView: View {
                             .font(.largeTitle)
                             .bold()
                     }
-                    .transition(.scaleAndFade)
                 }
             }
         }
+        .animation(nil)
     }
 }
 

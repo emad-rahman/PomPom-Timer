@@ -10,7 +10,7 @@ import SwiftUI
 
 struct TimerTextView: View {
     @EnvironmentObject var timerState: TimerState
-    @State var scale: CGFloat = 2
+    @State var scale: CGFloat = 4
 
     var body: some View {
         VStack {
@@ -26,21 +26,27 @@ struct TimerTextView: View {
                             .imageScale(.large)
                     }
                     .scaleEffect(self.scale)
-                    .animation(.default)
-                    .onAppear(){
-                        self.scale = 1
+                    .transition(.scaleAndFade)
+                    .onAppear() {
+                        self.scale = 1.5
                     }
-            
+                    .animation(.easeOut)
+                    .onDisappear() {
+                        self.scale = 4
+                    }
                 } else {
-                    Text("\((String.init(format: "%02d", self.timerState.minutesLeft)))")
-                        .font(.largeTitle)
-                        .bold()
-                    Text(":")
-                        .font(.largeTitle)
-                        .bold()
-                    Text("\((String.init(format: "%02d", self.timerState.secondsLeft)))")
-                        .font(.largeTitle)
-                        .bold()
+                    HStack {
+                        Text("\((String.init(format: "%02d", self.timerState.minutesLeft)))")
+                            .font(.largeTitle)
+                            .bold()
+                        Text(":")
+                            .font(.largeTitle)
+                            .bold()
+                        Text("\((String.init(format: "%02d", self.timerState.secondsLeft)))")
+                            .font(.largeTitle)
+                            .bold()
+                    }
+                    .transition(.scaleAndFade)
                 }
             }
         }

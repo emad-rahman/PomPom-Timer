@@ -46,7 +46,7 @@ struct ClockView: View {
                             .onAppear {
                                 self.scale = 300
                             }
-                            .animation(.spring(response: 0.55, dampingFraction: 0.25))
+                            .animation(.spring(response: 0.4, dampingFraction: 0.25))
                             .onDisappear() {
                                 self.scale = 1
                             }

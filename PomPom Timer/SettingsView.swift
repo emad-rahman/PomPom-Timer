@@ -12,31 +12,56 @@ struct SettingsView: View {
     @State var temp = false
     @State var temp2 = false
     
+    var colors = ["Red", "Green", "Blue", "Tartan"]
+    @State private var selectedColor = 0
+    
+    @State private var mins: Int = 45
+    @State private var breakMins: Int = 45
+    
+    
     var body: some View {
         NavigationView {
             VStack {
-                HStack {
-                    Image(systemName: "moon.fill")
-                    Toggle(isOn: $temp) {
-                        Text("Setting 1")
+                Form {
+                    Section(header: Text("Focus Timer Settings")) {
+                        HStack {
+                            Text("Focus Minutes")
+                            Spacer()
+                            TextField("20", value: $mins, formatter: NumberFormatter())
+                                .frame(width: 40, height: 30)
+                                .foregroundColor(.primary)
+                                .background(Color.gray.opacity(0.1))
+                                .cornerRadius(5)
+                                .multilineTextAlignment(.center)
+                                .keyboardType(.numberPad)
+                            Text("mins")
+                        }
+                        
+                        HStack {
+                            Text("Break Minutes")
+                            Spacer()
+                            TextField("5", value: $breakMins, formatter: NumberFormatter())
+                                .frame(width: 40, height: 30)
+                                .foregroundColor(.primary)
+                                .background(Color.gray.opacity(0.1))
+                                .cornerRadius(5)
+                                .multilineTextAlignment(.center)
+                                .keyboardType(.numberPad)
+                            Text("mins")
+                        }
+                    }
+                    
+                    
+                    Section(header: Text("About")) {
+                        HStack {
+                            Text("Version")
+                            Spacer()
+                            Text("1.0.0")
+                        }
                     }
                 }
-                
-                Divider()
-                
-                HStack {
-                    Image(systemName: "sparkles")
-                    Toggle(isOn: $temp2) {
-                        Text("Setting 2")
-                    }
-                }
-                
-                Divider()
-                
-                Spacer()
             }
-            .padding(.all)
-            .navigationBarTitle("Settings", displayMode: .inline)
+            .navigationBarTitle("Settings", displayMode: .large)
         }
     }
 }

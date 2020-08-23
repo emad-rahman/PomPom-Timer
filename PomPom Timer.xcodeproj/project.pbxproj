@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		150F380E24E773F000241A47 /* KeyboardHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 150F380D24E773F000241A47 /* KeyboardHelper.swift */; };
 		152ABA2B247B36030039BE95 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152ABA2A247B36030039BE95 /* AppDelegate.swift */; };
 		152ABA2D247B36030039BE95 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152ABA2C247B36030039BE95 /* SceneDelegate.swift */; };
 		152ABA2F247B36030039BE95 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152ABA2E247B36030039BE95 /* ContentView.swift */; };
@@ -16,13 +17,17 @@
 		152ABA3F247B3A490039BE95 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152ABA3E247B3A490039BE95 /* SettingsView.swift */; };
 		152ABA41247B3A7E0039BE95 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152ABA40247B3A7E0039BE95 /* TimerView.swift */; };
 		152ABA44247B53470039BE95 /* ClockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152ABA43247B53470039BE95 /* ClockView.swift */; };
+		1550305F24F1BE400059CAFD /* TestModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1550305D24F1BE400059CAFD /* TestModel.xcdatamodeld */; };
 		15760E94248474F100F6925B /* TimerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15760E93248474F100F6925B /* TimerState.swift */; };
 		15760E96248496A500F6925B /* ButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15760E95248496A500F6925B /* ButtonsView.swift */; };
 		15C2218024D7509F002810EB /* NotificationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C2217F24D7509F002810EB /* NotificationHelper.swift */; };
 		15C8B5502484302800424A73 /* TimerTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C8B54F2484302800424A73 /* TimerTextView.swift */; };
+		15FA0A3824E85F6D007564B4 /* EditableFieldsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FA0A3724E85F6D007564B4 /* EditableFieldsView.swift */; };
+		15FA0A3A24E85FD2007564B4 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FA0A3924E85FD2007564B4 /* AboutView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		150F380D24E773F000241A47 /* KeyboardHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardHelper.swift; sourceTree = "<group>"; };
 		152ABA27247B36030039BE95 /* PomPom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PomPom.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		152ABA2A247B36030039BE95 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		152ABA2C247B36030039BE95 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -34,10 +39,13 @@
 		152ABA3E247B3A490039BE95 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		152ABA40247B3A7E0039BE95 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		152ABA43247B53470039BE95 /* ClockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockView.swift; sourceTree = "<group>"; };
+		1550305E24F1BE400059CAFD /* TestModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TestModel.xcdatamodel; sourceTree = "<group>"; };
 		15760E93248474F100F6925B /* TimerState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerState.swift; sourceTree = "<group>"; };
 		15760E95248496A500F6925B /* ButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsView.swift; sourceTree = "<group>"; };
 		15C2217F24D7509F002810EB /* NotificationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationHelper.swift; sourceTree = "<group>"; };
 		15C8B54F2484302800424A73 /* TimerTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerTextView.swift; sourceTree = "<group>"; };
+		15FA0A3724E85F6D007564B4 /* EditableFieldsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditableFieldsView.swift; sourceTree = "<group>"; };
+		15FA0A3924E85FD2007564B4 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,13 +78,16 @@
 		152ABA29247B36030039BE95 /* PomPom Timer */ = {
 			isa = PBXGroup;
 			children = (
-				152ABA2E247B36030039BE95 /* ContentView.swift */,
 				15760E92248474E100F6925B /* Models */,
 				15C2217D24D75067002810EB /* Helpers */,
 				15C8B5512484320E00424A73 /* TimerViews */,
+				15FA0A3524E85F47007564B4 /* SettingsViews */,
 				152ABA2A247B36030039BE95 /* AppDelegate.swift */,
 				152ABA2C247B36030039BE95 /* SceneDelegate.swift */,
 				152ABA3E247B3A490039BE95 /* SettingsView.swift */,
+				152ABA40247B3A7E0039BE95 /* TimerView.swift */,
+				152ABA2E247B36030039BE95 /* ContentView.swift */,
+				1550305D24F1BE400059CAFD /* TestModel.xcdatamodeld */,
 				152ABA30247B36050039BE95 /* Assets.xcassets */,
 				152ABA35247B36050039BE95 /* LaunchScreen.storyboard */,
 				152ABA38247B36050039BE95 /* Info.plist */,
@@ -105,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				15C2217F24D7509F002810EB /* NotificationHelper.swift */,
+				150F380D24E773F000241A47 /* KeyboardHelper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -112,12 +124,20 @@
 		15C8B5512484320E00424A73 /* TimerViews */ = {
 			isa = PBXGroup;
 			children = (
-				152ABA40247B3A7E0039BE95 /* TimerView.swift */,
 				152ABA43247B53470039BE95 /* ClockView.swift */,
 				15C8B54F2484302800424A73 /* TimerTextView.swift */,
 				15760E95248496A500F6925B /* ButtonsView.swift */,
 			);
 			path = TimerViews;
+			sourceTree = "<group>";
+		};
+		15FA0A3524E85F47007564B4 /* SettingsViews */ = {
+			isa = PBXGroup;
+			children = (
+				15FA0A3724E85F6D007564B4 /* EditableFieldsView.swift */,
+				15FA0A3924E85FD2007564B4 /* AboutView.swift */,
+			);
+			path = SettingsViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,12 +215,16 @@
 				152ABA2B247B36030039BE95 /* AppDelegate.swift in Sources */,
 				152ABA44247B53470039BE95 /* ClockView.swift in Sources */,
 				152ABA2D247B36030039BE95 /* SceneDelegate.swift in Sources */,
+				15FA0A3A24E85FD2007564B4 /* AboutView.swift in Sources */,
 				152ABA3F247B3A490039BE95 /* SettingsView.swift in Sources */,
 				15760E94248474F100F6925B /* TimerState.swift in Sources */,
+				1550305F24F1BE400059CAFD /* TestModel.xcdatamodeld in Sources */,
 				15C2218024D7509F002810EB /* NotificationHelper.swift in Sources */,
+				150F380E24E773F000241A47 /* KeyboardHelper.swift in Sources */,
 				15760E96248496A500F6925B /* ButtonsView.swift in Sources */,
 				152ABA41247B3A7E0039BE95 /* TimerView.swift in Sources */,
 				152ABA2F247B36030039BE95 /* ContentView.swift in Sources */,
+				15FA0A3824E85F6D007564B4 /* EditableFieldsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -398,6 +422,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		1550305D24F1BE400059CAFD /* TestModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				1550305E24F1BE400059CAFD /* TestModel.xcdatamodel */,
+			);
+			currentVersion = 1550305E24F1BE400059CAFD /* TestModel.xcdatamodel */;
+			path = TestModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 152ABA1F247B36030039BE95 /* Project object */;
 }

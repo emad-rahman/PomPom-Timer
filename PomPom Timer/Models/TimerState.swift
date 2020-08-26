@@ -16,7 +16,8 @@ final class TimerState: ObservableObject {
     @Published var started: Bool = false
     @Published var complete: Bool = false
     
-    var currentDate: Date = Date()
+    private var currentDate: Date = Date()
+    private let defaults = UserDefaults.standard
     
     init() {}
     
@@ -30,8 +31,11 @@ final class TimerState: ObservableObject {
     }
     
     func reset() {
+        let savedFocusMinutesString = defaults.string(forKey: "focusMinutes")
+        let savedFocusedMinutesInt: Int = Int(savedFocusMinutesString ?? "20") ?? 20
+        
         secondsLeft = 0
-        minutesLeft = 20
+        minutesLeft = savedFocusedMinutesInt < 1 ? 20 : savedFocusedMinutesInt
         started = false
         complete = false
     }

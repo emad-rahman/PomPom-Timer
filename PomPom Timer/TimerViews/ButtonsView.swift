@@ -12,9 +12,9 @@ import UserNotifications
 extension AnyTransition {
     static var moveAndFadeRight: AnyTransition {
         let insertion = AnyTransition.move(edge: .trailing)
-            .combined(with: .opacity)
+//            .combined(with: .opacity)
         let removal = AnyTransition.move(edge: .trailing)
-            .combined(with: opacity)
+//            .combined(with: opacity)
         return .asymmetric(insertion: insertion, removal: removal)
     }
     
@@ -48,24 +48,14 @@ struct ButtonsView: View {
                             .frame(width: buttonWidth, height: buttonHeight)
                             .foregroundColor(Color("TimerCircleForeground"))
                         
-                        HStack{
-                            if !self.timerState.started {
-                                    Image(systemName: "play.circle.fill")
-                                        .imageScale(.large)
-                                        .foregroundColor(.white)
-                                    Text("Start")
-                                        .bold()
-                                        .fixedSize()
-                                        .foregroundColor(.white)
-                                
-                            } else {
-                                Image(systemName: "pause.circle.fill")
-                                    .imageScale(.large)
-                                    .foregroundColor(.white)
-                                Text("Stop")
-                                    .bold()
-                                    .foregroundColor(.white)
-                            }
+                        HStack {
+                            Image(systemName: !self.timerState.started ? "play.circle.fill" : "pause.circle.fill")
+                                .imageScale(.large)
+                                .foregroundColor(.white)
+                            Text(!self.timerState.started ? "Start" : "Stop")
+                                .bold()
+                                .foregroundColor(.white)
+                            
                         }
                     }
                 }
@@ -82,8 +72,8 @@ struct ButtonsView: View {
                 }) {
                     ZStack {
                         RoundedRectangle(cornerRadius: cornerRadius)
-                           .frame(width: buttonWidth, height: buttonHeight)
-                           .foregroundColor(Color(.lightGray))
+                            .frame(width: buttonWidth, height: buttonHeight)
+                            .foregroundColor(Color(.lightGray))
                         
                         HStack {
                             Image(systemName: "arrow.uturn.left.circle.fill")

@@ -24,14 +24,14 @@ struct ClockView: View {
             ZStack {
                 Circle()
                     .trim(from: 0, to: 1)
-                    .stroke(Color("TimerCircleBackground"), style: StrokeStyle(lineWidth: 40, lineCap: .round))
+                    .stroke(Color("TimerCircleBackground"), style: StrokeStyle(lineWidth: 45, lineCap: .round))
                     .frame(width: 280, height: 280)
                 
                 ZStack {
                     if !self.timerState.complete {
                         Circle()
                             .trim(from: 0, to: CGFloat(self.timerState.progress()))
-                            .stroke(Color("TimerCircleForeground"), style: StrokeStyle(lineWidth: 35, lineCap: .round))
+                            .stroke(Color("TimerCircleForeground"), style: StrokeStyle(lineWidth: 40, lineCap: .round))
                             .rotationEffect(Angle(degrees: -90.0))
                             .animation(.linear(duration: 0.05))
                             .frame(width: 280, height: 280)

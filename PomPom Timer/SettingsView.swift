@@ -14,6 +14,7 @@ struct SettingsView: View {
     
     @State private var focusMinutes: String = "20"
     @State private var breakMinutes: String = "20"
+    @State private var numberOfSessions: String = "4"
     
     private let defaults = UserDefaults.standard
     
@@ -35,7 +36,7 @@ struct SettingsView: View {
                                 .cornerRadius(5)
                                 .multilineTextAlignment(.center)
                                 .keyboardType(.numberPad)
-                            Text("mins")
+                            
                         }
                         
                         HStack {
@@ -49,7 +50,20 @@ struct SettingsView: View {
                                 .cornerRadius(5)
                                 .multilineTextAlignment(.center)
                                 .keyboardType(.numberPad)
-                            Text("mins")
+                        }
+                        
+                        HStack {
+                            Text("Number Of Session")
+                            Spacer()
+                            TextField("4", text: $numberOfSessions)
+                                .keyboardType(.decimalPad)
+                                .frame(width: 40, height: 30)
+                                .foregroundColor(.primary)
+                                .background(Color.gray.opacity(0.2))
+                                .cornerRadius(5)
+                                .multilineTextAlignment(.center)
+                                .keyboardType(.numberPad)
+                            
                         }
                     }
                     AboutView()

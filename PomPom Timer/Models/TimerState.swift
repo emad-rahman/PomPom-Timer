@@ -36,6 +36,7 @@ final class TimerState: ObservableObject {
         
         secondsLeft = 0
         minutesLeft = savedFocusedMinutesInt < 1 ? 20 : savedFocusedMinutesInt
+//        minutesLeft = 0
         started = false
         complete = false
     }

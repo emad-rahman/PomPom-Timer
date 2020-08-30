@@ -17,6 +17,7 @@ struct SettingsView: View {
     @State private var numberOfSessions: String = "4"
     
     private let defaults = UserDefaults.standard
+    private let dataContext = DataContext()
     
     var body: some View {
         NavigationView {
@@ -91,16 +92,13 @@ struct SettingsView: View {
     }
     
     func save() {
-        defaults.set(focusMinutes, forKey: "focusMinutes")
-        defaults.set(breakMinutes, forKey: "breakMinutes")
+        dataContext.SaveFocusMinutesToUserDefaults(focusMinutes: focusMinutes)
+        dataContext.SaveShortBreakMinutesToUserDefaults(breakMinutes: breakMinutes)
     }
     
     func load() {
-        let savedFocusMinutes = defaults.string(forKey: "focusMinutes")
-        let savedBreakMinutes = defaults.string(forKey: "breakMinutes")
-        
-        focusMinutes = savedFocusMinutes == "0" ? "20" : savedFocusMinutes ?? "20"
-        breakMinutes = savedBreakMinutes == "0" ? "5" : savedBreakMinutes ?? "5"
+        focusMinutes = String(dataContext.GetFocusMinutesFromUserDefaults())
+        breakMinutes = String(dataContext.GetShortBreakMinutesFromUserDefaults())
     }
 }
 

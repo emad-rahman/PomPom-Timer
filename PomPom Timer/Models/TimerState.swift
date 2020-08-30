@@ -13,8 +13,11 @@ final class TimerState: ObservableObject {
     @Published var secondsLeft: Int = 0
     @Published var minutesLeft: Int = 20
     
-    @Published var breakSecondsLeft: Int = 0
-    @Published var breakMinutesLeft: Int = 5
+    @Published var shortBreakSecondsLeft: Int = 0
+    @Published var shortBreakMinutesLeft: Int = 5
+    @Published var longBreakSecondsLeft: Int = 0
+    @Published var longBreakMinutesLeft: Int = 15
+    
     
     @Published var started: Bool = false
     @Published var complete: Bool = false

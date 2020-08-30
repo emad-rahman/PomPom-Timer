@@ -18,6 +18,7 @@
 		152ABA41247B3A7E0039BE95 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152ABA40247B3A7E0039BE95 /* TimerView.swift */; };
 		152ABA44247B53470039BE95 /* ClockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152ABA43247B53470039BE95 /* ClockView.swift */; };
 		1550305F24F1BE400059CAFD /* TestModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1550305D24F1BE400059CAFD /* TestModel.xcdatamodeld */; };
+		156F664324FC62AB004BE806 /* DataContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156F664224FC62AB004BE806 /* DataContext.swift */; };
 		15760E94248474F100F6925B /* TimerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15760E93248474F100F6925B /* TimerState.swift */; };
 		15760E96248496A500F6925B /* ButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15760E95248496A500F6925B /* ButtonsView.swift */; };
 		15C2218024D7509F002810EB /* NotificationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C2217F24D7509F002810EB /* NotificationHelper.swift */; };
@@ -40,6 +41,7 @@
 		152ABA40247B3A7E0039BE95 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		152ABA43247B53470039BE95 /* ClockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockView.swift; sourceTree = "<group>"; };
 		1550305E24F1BE400059CAFD /* TestModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TestModel.xcdatamodel; sourceTree = "<group>"; };
+		156F664224FC62AB004BE806 /* DataContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataContext.swift; sourceTree = "<group>"; };
 		15760E93248474F100F6925B /* TimerState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerState.swift; sourceTree = "<group>"; };
 		15760E95248496A500F6925B /* ButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsView.swift; sourceTree = "<group>"; };
 		15C2217F24D7509F002810EB /* NotificationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationHelper.swift; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 		152ABA29247B36030039BE95 /* PomPom Timer */ = {
 			isa = PBXGroup;
 			children = (
+				156F664124FC6286004BE806 /* Data */,
 				15760E92248474E100F6925B /* Models */,
 				15C2217D24D75067002810EB /* Helpers */,
 				15C8B5512484320E00424A73 /* TimerViews */,
@@ -102,6 +105,14 @@
 				152ABA33247B36050039BE95 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		156F664124FC6286004BE806 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				156F664224FC62AB004BE806 /* DataContext.swift */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 		15760E92248474E100F6925B /* Models */ = {
@@ -218,6 +229,7 @@
 				15FA0A3A24E85FD2007564B4 /* AboutView.swift in Sources */,
 				152ABA3F247B3A490039BE95 /* SettingsView.swift in Sources */,
 				15760E94248474F100F6925B /* TimerState.swift in Sources */,
+				156F664324FC62AB004BE806 /* DataContext.swift in Sources */,
 				1550305F24F1BE400059CAFD /* TestModel.xcdatamodeld in Sources */,
 				15C2218024D7509F002810EB /* NotificationHelper.swift in Sources */,
 				150F380E24E773F000241A47 /* KeyboardHelper.swift in Sources */,

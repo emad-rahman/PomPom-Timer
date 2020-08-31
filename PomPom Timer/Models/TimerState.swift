@@ -10,15 +10,15 @@ import Combine
 import SwiftUI
 
 final class TimerState: ObservableObject {
-    @Published var secondsLeft: Int = 0
-    @Published var minutesLeft: Int = 20
+    @Published var secondsLeft: Int = TimerConstants.defaultFocusSeconds
+    @Published var minutesLeft: Int = TimerConstants.defaultFocusMinutes
     
-    @Published var shortBreakSecondsLeft: Int = 0
-    @Published var shortBreakMinutesLeft: Int = 5
-    @Published var longBreakSecondsLeft: Int = 0
-    @Published var longBreakMinutesLeft: Int = 15
+    @Published var shortBreakSecondsLeft: Int = TimerConstants.defaultShortBreakSeconds
+    @Published var shortBreakMinutesLeft: Int = TimerConstants.defaultShortBreakMinutes
+    @Published var longBreakSecondsLeft: Int = TimerConstants.defaultLongBreakSeconds
+    @Published var longBreakMinutesLeft: Int = TimerConstants.defaultLongBreakMinutes
     
-    @Published var numberOfSessions: Int = 4
+    @Published var numberOfSessions: Int = TimerConstants.defaultNumberOfSessions
     @Published var currentSession: Int = 1
     
     @Published var started: Bool = false
@@ -28,7 +28,9 @@ final class TimerState: ObservableObject {
     
     private var dataContext = DataContext()
     
-    init() {}
+    init() {
+        
+    }
     
     func isTimerFinished() -> Bool {
         return secondsLeft == 0 && minutesLeft == 0 && started

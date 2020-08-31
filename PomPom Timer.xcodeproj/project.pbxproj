@@ -19,6 +19,7 @@
 		152ABA44247B53470039BE95 /* ClockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152ABA43247B53470039BE95 /* ClockView.swift */; };
 		1550305F24F1BE400059CAFD /* TestModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1550305D24F1BE400059CAFD /* TestModel.xcdatamodeld */; };
 		156F664324FC62AB004BE806 /* DataContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156F664224FC62AB004BE806 /* DataContext.swift */; };
+		156F664524FC7798004BE806 /* SessionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156F664424FC7798004BE806 /* SessionsView.swift */; };
 		15760E94248474F100F6925B /* TimerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15760E93248474F100F6925B /* TimerState.swift */; };
 		15760E96248496A500F6925B /* ButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15760E95248496A500F6925B /* ButtonsView.swift */; };
 		15C2218024D7509F002810EB /* NotificationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C2217F24D7509F002810EB /* NotificationHelper.swift */; };
@@ -42,6 +43,7 @@
 		152ABA43247B53470039BE95 /* ClockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockView.swift; sourceTree = "<group>"; };
 		1550305E24F1BE400059CAFD /* TestModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TestModel.xcdatamodel; sourceTree = "<group>"; };
 		156F664224FC62AB004BE806 /* DataContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataContext.swift; sourceTree = "<group>"; };
+		156F664424FC7798004BE806 /* SessionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionsView.swift; sourceTree = "<group>"; };
 		15760E93248474F100F6925B /* TimerState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerState.swift; sourceTree = "<group>"; };
 		15760E95248496A500F6925B /* ButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsView.swift; sourceTree = "<group>"; };
 		15C2217F24D7509F002810EB /* NotificationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationHelper.swift; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 				152ABA43247B53470039BE95 /* ClockView.swift */,
 				15C8B54F2484302800424A73 /* TimerTextView.swift */,
 				15760E95248496A500F6925B /* ButtonsView.swift */,
+				156F664424FC7798004BE806 /* SessionsView.swift */,
 			);
 			path = TimerViews;
 			sourceTree = "<group>";
@@ -237,6 +240,7 @@
 				152ABA41247B3A7E0039BE95 /* TimerView.swift in Sources */,
 				152ABA2F247B36030039BE95 /* ContentView.swift in Sources */,
 				15FA0A3824E85F6D007564B4 /* EditableFieldsView.swift in Sources */,
+				156F664524FC7798004BE806 /* SessionsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

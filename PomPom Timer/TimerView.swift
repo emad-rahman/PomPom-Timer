@@ -13,8 +13,7 @@ struct TimerView: View {
         NavigationView {
             VStack {
                 Spacer()
-                Text("Session: 1 / 4")
-                    .bold()
+                SessionsView()
                 Spacer()
                 ZStack {
                     ClockView()

@@ -27,7 +27,7 @@ struct SettingsView: View {
   
                     Section(header: Text("Focus Timer Settings")) {
                         HStack {
-                            Text("Focus Minutes")
+                            Text("Focus minutes")
                             Spacer()
                             TextField("20", text: $focusMinutes)
                                 .keyboardType(.decimalPad)
@@ -41,7 +41,7 @@ struct SettingsView: View {
                         }
                         
                         HStack {
-                            Text("Break Minutes")
+                            Text("Break minutes")
                             Spacer()
                             TextField("5", text: $breakMinutes)
                                 .keyboardType(.decimalPad)
@@ -54,7 +54,7 @@ struct SettingsView: View {
                         }
                         
                         HStack {
-                            Text("Number Of Session")
+                            Text("Number of sessions before break")
                             Spacer()
                             TextField("4", text: $numberOfSessions)
                                 .keyboardType(.decimalPad)
@@ -94,11 +94,13 @@ struct SettingsView: View {
     func save() {
         dataContext.SaveFocusMinutesToUserDefaults(focusMinutes: focusMinutes)
         dataContext.SaveShortBreakMinutesToUserDefaults(breakMinutes: breakMinutes)
+        dataContext.SaveNumberOfSessionsToUserDefaults(numberOfSessions: numberOfSessions)
     }
     
     func load() {
         focusMinutes = String(dataContext.GetFocusMinutesFromUserDefaults())
         breakMinutes = String(dataContext.GetShortBreakMinutesFromUserDefaults())
+        numberOfSessions = String(dataContext.GetNumberOfSessionsFromUserDefaults())
     }
 }
 

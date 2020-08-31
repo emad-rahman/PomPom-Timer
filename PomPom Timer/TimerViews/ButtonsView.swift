@@ -12,9 +12,9 @@ import UserNotifications
 extension AnyTransition {
     static var moveAndFadeRight: AnyTransition {
         let insertion = AnyTransition.move(edge: .trailing)
-//            .combined(with: .opacity)
+            .combined(with: .opacity)
         let removal = AnyTransition.move(edge: .trailing)
-//            .combined(with: opacity)
+            .combined(with: opacity)
         return .asymmetric(insertion: insertion, removal: removal)
     }
     

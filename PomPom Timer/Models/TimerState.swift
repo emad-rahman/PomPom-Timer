@@ -21,12 +21,10 @@ final class TimerState: ObservableObject {
     @Published var numberOfSessions: Int = 4
     @Published var currentSession: Int = 1
     
-    
     @Published var started: Bool = false
     @Published var complete: Bool = false
     
     private var currentDate: Date = Date()
-    private let defaults = UserDefaults.standard
     
     private var dataContext = DataContext()
     

@@ -9,8 +9,10 @@
 import SwiftUI
 
 struct SessionsView: View {
+    @EnvironmentObject var timerState: TimerState
+    
     var body: some View {
-        Text("Session: 1 / 4")
+        Text("Session: \(timerState.currentSession) / \(timerState.numberOfSessions)")
             .bold()
     }
 }

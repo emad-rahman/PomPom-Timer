@@ -18,6 +18,9 @@ final class TimerState: ObservableObject {
     @Published var longBreakSecondsLeft: Int = 0
     @Published var longBreakMinutesLeft: Int = 15
     
+    @Published var numberOfSessions: Int = 4
+    @Published var currentSession: Int = 1
+    
     
     @Published var started: Bool = false
     @Published var complete: Bool = false
@@ -43,6 +46,8 @@ final class TimerState: ObservableObject {
         minutesLeft = dataContext.GetFocusMinutesFromUserDefaults()
         started = false
         complete = false
+        numberOfSessions = dataContext.GetNumberOfSessionsFromUserDefaults()
+        currentSession = 1
     }
     
     func update() {

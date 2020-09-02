@@ -30,7 +30,7 @@ struct ClockView: View {
                 ZStack {
                     if !self.timerState.complete {
                         Circle()
-                            .trim(from: 0, to: CGFloat(self.timerState.progress()))
+                            .trim(from: 0, to: CGFloat(TimerStateHelper().timerProgress(timerState: self.timerState)))
                             .stroke(Color("TimerCircleForeground"), style: StrokeStyle(lineWidth: 35, lineCap: .round))
                             .rotationEffect(Angle(degrees: -90.0))
                             .animation(.linear(duration: 0.05))

@@ -23,6 +23,7 @@
 		156F664824FC832E004BE806 /* TimerConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156F664724FC832E004BE806 /* TimerConstants.swift */; };
 		15760E94248474F100F6925B /* TimerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15760E93248474F100F6925B /* TimerState.swift */; };
 		15760E96248496A500F6925B /* ButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15760E95248496A500F6925B /* ButtonsView.swift */; };
+		1580580524FFF24C00697CC5 /* TimerStateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1580580424FFF24C00697CC5 /* TimerStateHelper.swift */; };
 		15C2218024D7509F002810EB /* NotificationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C2217F24D7509F002810EB /* NotificationHelper.swift */; };
 		15C8B5502484302800424A73 /* TimerTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C8B54F2484302800424A73 /* TimerTextView.swift */; };
 		15FA0A3824E85F6D007564B4 /* EditableFieldsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FA0A3724E85F6D007564B4 /* EditableFieldsView.swift */; };
@@ -48,6 +49,7 @@
 		156F664724FC832E004BE806 /* TimerConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerConstants.swift; sourceTree = "<group>"; };
 		15760E93248474F100F6925B /* TimerState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerState.swift; sourceTree = "<group>"; };
 		15760E95248496A500F6925B /* ButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsView.swift; sourceTree = "<group>"; };
+		1580580424FFF24C00697CC5 /* TimerStateHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerStateHelper.swift; sourceTree = "<group>"; };
 		15C2217F24D7509F002810EB /* NotificationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationHelper.swift; sourceTree = "<group>"; };
 		15C8B54F2484302800424A73 /* TimerTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerTextView.swift; sourceTree = "<group>"; };
 		15FA0A3724E85F6D007564B4 /* EditableFieldsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditableFieldsView.swift; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 			children = (
 				15C2217F24D7509F002810EB /* NotificationHelper.swift */,
 				150F380D24E773F000241A47 /* KeyboardHelper.swift */,
+				1580580424FFF24C00697CC5 /* TimerStateHelper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -237,6 +240,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				15C8B5502484302800424A73 /* TimerTextView.swift in Sources */,
+				1580580524FFF24C00697CC5 /* TimerStateHelper.swift in Sources */,
 				152ABA2B247B36030039BE95 /* AppDelegate.swift in Sources */,
 				152ABA44247B53470039BE95 /* ClockView.swift in Sources */,
 				152ABA2D247B36030039BE95 /* SceneDelegate.swift in Sources */,

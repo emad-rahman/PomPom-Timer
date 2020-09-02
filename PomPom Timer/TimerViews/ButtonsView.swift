@@ -67,7 +67,8 @@ struct ButtonsView: View {
             if !self.timerState.started {
                 Button(action: {
                     withAnimation {
-                        self.timerState.reset()
+                        TimerStateHelper().resetTimer(timerState: self.timerState)
+//                        self.timerState.reset()
                     }
                 }) {
                     ZStack {

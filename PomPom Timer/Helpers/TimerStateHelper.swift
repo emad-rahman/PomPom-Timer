@@ -26,4 +26,13 @@ class TimerStateHelper {
         
         return timerProgress
     }
+    
+    func resetTimer(timerState: TimerState) -> Void {
+        timerState.secondsLeft = TimerConstants.defaultFocusSeconds
+        timerState.minutesLeft = dataContext.GetFocusMinutesFromUserDefaults()
+        timerState.started = false
+        timerState.complete = false
+        timerState.numberOfSessions = dataContext.GetNumberOfSessionsFromUserDefaults()
+        timerState.currentSession = 1
+    }
 }

@@ -11,14 +11,14 @@ import SwiftUI
 
 final class TimerState: ObservableObject {
     @Published var secondsLeft: Int = TimerConstants.defaultFocusSeconds
-    @Published var minutesLeft: Int = TimerConstants.defaultFocusMinutes
+    @Published var minutesLeft: Int
     
     @Published var shortBreakSecondsLeft: Int = TimerConstants.defaultShortBreakSeconds
     @Published var shortBreakMinutesLeft: Int = TimerConstants.defaultShortBreakMinutes
     @Published var longBreakSecondsLeft: Int = TimerConstants.defaultLongBreakSeconds
     @Published var longBreakMinutesLeft: Int = TimerConstants.defaultLongBreakMinutes
     
-    @Published var numberOfSessions: Int = TimerConstants.defaultNumberOfSessions
+    @Published var numberOfSessions: Int
     @Published var currentSession: Int = 1
     
     @Published var started: Bool = false
@@ -29,16 +29,8 @@ final class TimerState: ObservableObject {
     private var dataContext = DataContext()
     
     init() {
-        
-    }
-    
-    func reset() {
-        secondsLeft = 0
         minutesLeft = dataContext.GetFocusMinutesFromUserDefaults()
-        started = false
-        complete = false
         numberOfSessions = dataContext.GetNumberOfSessionsFromUserDefaults()
-        currentSession = 1
     }
     
     func update() {

@@ -12,81 +12,84 @@ struct SettingsView: View {
     @EnvironmentObject private var timerState: TimerState
     @State private var showingAlert = false
     
-    @State private var focusMinutes: String = "20"
-    @State private var breakMinutes: String = "20"
-    @State private var numberOfSessions: String = "4"
+    @State private var focusMinutes: String = ""
+    @State private var breakMinutes: String = ""
+    @State private var numberOfSessions: String = ""
     
     private let defaults = UserDefaults.standard
     private let dataContext = DataContext()
+    
+    var frameworks = ["UIKit", "Core Data", "CloudKit", "SwiftUI"]
+    @State private var selectedFrameworkIndex = 0
+    @State var selectedDate = Date()
+    
+    
+    var dateClosedRange: ClosedRange<Date> {
+        let min = Calendar.current.date(byAdding: .day, value: -1, to: Date())!
+        let max = Calendar.current.date(byAdding: .day, value: 1, to: Date())!
+        return min...max
+    }
     
     var body: some View {
         NavigationView {
             VStack {
                 Form {
-//                    EditableFieldsView()
-  
                     Section(header: Text("Focus Timer Settings")) {
                         HStack {
                             Text("Focus minutes")
                             Spacer()
-                            TextField("20", text: $focusMinutes)
-                                .keyboardType(.decimalPad)
-                                .frame(width: 40, height: 30)
+                            TextField(String(TimerConstants.defaultFocusMinutes), text: $focusMinutes)
+                                .keyboardType(.numberPad)
+                                .frame(width: 40, height: 32)
                                 .foregroundColor(.primary)
                                 .background(Color.gray.opacity(0.2))
                                 .cornerRadius(5)
                                 .multilineTextAlignment(.center)
-                                .keyboardType(.numberPad)
-                            
                         }
                         
                         HStack {
                             Text("Break minutes")
                             Spacer()
-                            TextField("5", text: $breakMinutes)
-                                .keyboardType(.decimalPad)
-                                .frame(width: 40, height: 30)
+                            TextField(String(TimerConstants.defaultShortBreakMinutes), text: $breakMinutes)
+                                .keyboardType(.numberPad)
+                                .frame(width: 40, height: 32)
                                 .foregroundColor(.primary)
                                 .background(Color.gray.opacity(0.2))
                                 .cornerRadius(5)
                                 .multilineTextAlignment(.center)
-                                .keyboardType(.numberPad)
                         }
                         
                         HStack {
                             Text("Number of sessions before break")
                             Spacer()
-                            TextField("4", text: $numberOfSessions)
-                                .keyboardType(.decimalPad)
-                                .frame(width: 40, height: 30)
+                            TextField(String(TimerConstants.defaultNumberOfSessions), text: $numberOfSessions)
+                                .keyboardType(.numberPad)
+                                .frame(width: 40, height: 32)
                                 .foregroundColor(.primary)
                                 .background(Color.gray.opacity(0.2))
                                 .cornerRadius(5)
                                 .multilineTextAlignment(.center)
-                                .keyboardType(.numberPad)
-                            
                         }
                     }
+                    
                     AboutView()
+                    
                 }
-            }
-            .onTapGesture {
-                KeyboardHelper().hideKeyboard()
             }
             .onAppear(perform: load)
             .navigationBarTitle("Settings", displayMode: .inline)
             .navigationBarItems(trailing:
-                Button("Save") {
-                    self.save()
-                    KeyboardHelper().hideKeyboard()
-                    self.showingAlert = true
-                }
-                .alert(isPresented: $showingAlert) {
-                    Alert(
-                        title: Text("Timer Values Saved!"),
-                        message: Text("Focus minutes set to \(self.focusMinutes) mins. \n Break minutes set to \(self.breakMinutes) mins."),
-                        dismissButton: .default(Text("Ok")))
-                }
+                                    Button("Save") {
+                                        self.save()
+                                        KeyboardHelper().hideKeyboard()
+                                        self.showingAlert = true
+                                    }
+                                    .alert(isPresented: $showingAlert) {
+                                        Alert(
+                                            title: Text("Timer Values Saved!"),
+                                            message: Text("Focus minutes set to \(self.focusMinutes) mins. \n Break minutes set to \(self.breakMinutes) mins."),
+                                            dismissButton: .default(Text("Ok")))
+                                    }
             )
         }
     }
